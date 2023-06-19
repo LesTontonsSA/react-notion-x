@@ -63,5 +63,9 @@
       "prettier --write",
       "eslint --fix"
     ]
+  },
+  "volta": {
+    "node": "16.20.0",
+    "yarn": "1.22.19"
   }
 }
