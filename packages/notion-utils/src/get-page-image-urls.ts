@@ -31,7 +31,10 @@ export const getPageImageUrls = (
           if (source) {
             images.push({
               block,
-              url: source.replace('https://', 'https://fidexpedia-image-proxy.aibrahim.workers.dev/')
+              url: source.replace(
+                'https://',
+                'https://fidexpedia-image-proxy.aibrahim.workers.dev/'
+              )
             })
           }
         }
@@ -41,7 +44,10 @@ export const getPageImageUrls = (
 
           images.push({
             block,
-            url: source.replace('https://', 'https://fidexpedia-image-proxy.aibrahim.workers.dev/')
+            url: source.replace(
+              'https://',
+              'https://fidexpedia-image-proxy.aibrahim.workers.dev/'
+            )
           })
         }
 
@@ -50,7 +56,10 @@ export const getPageImageUrls = (
 
           images.push({
             block,
-            url: source.replace('https://', 'https://fidexpedia-image-proxy.aibrahim.workers.dev/')
+            url: source.replace(
+              'https://',
+              'https://fidexpedia-image-proxy.aibrahim.workers.dev/'
+            )
           })
         }
 
@@ -59,7 +68,10 @@ export const getPageImageUrls = (
 
           images.push({
             block,
-            url: source.replace('https://', 'https://fidexpedia-image-proxy.aibrahim.workers.dev/')
+            url: source.replace(
+              'https://',
+              'https://fidexpedia-image-proxy.aibrahim.workers.dev/'
+            )
           })
         }
 
@@ -67,10 +79,17 @@ export const getPageImageUrls = (
         if (pageIcon && isUrl(pageIcon)) {
           images.push({
             block,
-            url: pageIcon.replace('https://', 'https://fidexpedia-image-proxy.aibrahim.workers.dev/')
+            url: pageIcon.replace(
+              'https://',
+              'https://fidexpedia-image-proxy.aibrahim.workers.dev/'
+            )
           })
         }
       }
+
+      images.forEach(({ url }) => {
+        console.log('-> getPageImageUrls', url)
+      })
 
       return images
     })
