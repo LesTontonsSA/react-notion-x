@@ -18,6 +18,7 @@ export async function getPreviewImageMap(
   const urls: string[] = getPageImageUrls(recordMap, {
     mapImageUrl: defaultMapImageUrl
   })
+  .map((url) => url.replace('https://', 'https://fidexpedia-image-proxy.aibrahim.workers.dev/'))
 
   const previewImagesMap = Object.fromEntries(
     await pMap(urls, async (url) => [url, await getPreviewImage(url)], {

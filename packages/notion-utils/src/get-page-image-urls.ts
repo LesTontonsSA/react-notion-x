@@ -31,7 +31,7 @@ export const getPageImageUrls = (
           if (source) {
             images.push({
               block,
-              url: source
+              url: source.replace('https://', 'https://fidexpedia-image-proxy.aibrahim.workers.dev/')
             })
           }
         }
@@ -41,7 +41,7 @@ export const getPageImageUrls = (
 
           images.push({
             block,
-            url: source
+            url: source.replace('https://', 'https://fidexpedia-image-proxy.aibrahim.workers.dev/')
           })
         }
 
@@ -50,7 +50,7 @@ export const getPageImageUrls = (
 
           images.push({
             block,
-            url: source
+            url: source.replace('https://', 'https://fidexpedia-image-proxy.aibrahim.workers.dev/')
           })
         }
 
@@ -59,7 +59,7 @@ export const getPageImageUrls = (
 
           images.push({
             block,
-            url: source
+            url: source.replace('https://', 'https://fidexpedia-image-proxy.aibrahim.workers.dev/')
           })
         }
 
@@ -67,7 +67,7 @@ export const getPageImageUrls = (
         if (pageIcon && isUrl(pageIcon)) {
           images.push({
             block,
-            url: pageIcon
+            url: pageIcon.replace('https://', 'https://fidexpedia-image-proxy.aibrahim.workers.dev/')
           })
         }
       }
